@@ -36,5 +36,5 @@ style = "bg:#394260"
 format = '[[($all_status$ahead_behind )](bg:#394260 fg:#94e2d5)]($style)'
 
 [character]
-success_symbol = "[╰─>](fg:#94e2d5)"
-error_symbol = "[TEST > ](fg:red)"
+success_symbol = "[╰─> ](fg:#94e2d5)"
+error_symbol = "[╰─> ](fg:red)"
