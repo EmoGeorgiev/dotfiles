@@ -15,8 +15,11 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
-    Super+Space hotkey-overlay-title="Open an application: spotlight" { spawn "sh" "-c" "dms ipc call spotlight toggle"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+Space hotkey-overlay-title="Open an application: spotlight" { spawn "sh" "-c" "dms ipc call spotlight toggle"; }
+    Mod+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+Shift+Return { spawn "firefox"; }
+    Mod+Shift+D { spawn "ghostty" "-e" "yazi"; }
+    Mod+Shift+N { spawn "ghostty" "-e" "nvim"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
