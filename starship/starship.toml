@@ -1,40 +1,47 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-$username\
-[](bg:#94e2d5 fg:#a3aed2)\
+[╭─](#94e2d5)$username\
+$hostname\
 $directory\
-[](bg:#394260 fg:#94e2d5)\
+$fill\
 $git_branch\
 $git_status\
-[](fg:#394260)\
 \n$character"""
 
 [username]
 show_always = true
-format = "[ $user ](bg:#a3aed2 fg:#090c0c)"
+format = "[ $user@](bold #8aadf4)"
+
+[hostname]
+ssh_only = false
+format = "[$hostname](bold #8aadf4)"
 
 [directory]
-style = "bg:#94e2d5 fg:#090c0c"
+style = "bold #8aadf4"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
+[fill]
+symbol = "."
+style = "bold #94e2d5"
+
 [directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
+"Documents" = "󰈙 Documents"
+"Downloads" = "  Downloads"
+"Music" = "  Music"
+"Pictures" = "  Pictures"
 
 [git_branch]
 symbol = ""
-style = "bg:#394260"
-format = '[[ $symbol $branch ](bg:#394260 fg:#94e2d5)]($style)'
+style = "bold #8aadf4"
+format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#394260"
-format = '[[($all_status$ahead_behind )](bg:#394260 fg:#94e2d5)]($style)'
+style = "bold #8aadf4"
+format = '[($all_status$ahead_behind )]($style)'
 
 [character]
-success_symbol = "[╰─> ](fg:#94e2d5)"
-error_symbol = "[╰─> ](fg:red)"
+success_symbol = "[╰─>](bold fg:#94e2d5)"
+error_symbol = "[╰─>](fg:red)"
