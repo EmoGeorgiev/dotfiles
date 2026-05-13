@@ -3,6 +3,7 @@
 format = """
 [╭─ ](secondary)$username\
 $hostname\
+[ in](bold secondary)\
 $directory\
 $fill\
 $git_branch\
