@@ -17,9 +17,9 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+Space hotkey-overlay-title="Open an application: spotlight" { spawn "sh" "-c" "dms ipc call spotlight toggle"; }
     Mod+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
-    Mod+Shift+Return { spawn "firefox"; }
-    Mod+Shift+D { spawn "ghostty" "-e" "yazi"; }
-    Mod+Shift+N { spawn "ghostty" "-e" "nvim"; }
+    Mod+Shift+Return hotkey-overlay-title="Open firefox" { spawn "firefox"; }
+    Mod+Shift+D hotkey-overlay-title="Open yazi" { spawn "ghostty" "-e" "yazi"; }
+    Mod+Shift+N hotkey-overlay-title="Open neovim" { spawn "ghostty" "-e" "nvim"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
